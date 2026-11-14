@@ -1,0 +1,10 @@
+var nav=document.getElementById('nav');
+document.getElementById('burger').onclick=function(){nav.classList.toggle('open')};
+nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+var lb=document.getElementById('lb');
+document.querySelectorAll('.work').forEach(function(w){w.onclick=function(){document.getElementById('li').src=w.dataset.img;document.getElementById('lt').textContent=w.dataset.t;lb.classList.add('on')}});
+lb.onclick=function(){lb.classList.remove('on')};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+document.getElementById('f').onsubmit=function(e){e.preventDefault();
+ var b='Name: '+n.value+'\nPhone: '+p.value+'\nService: '+s.value+'\n\n'+m.value;
+ location.href='mailto:geoexpert@gmail.com?subject='+encodeURIComponent('Quotation request: '+s.value)+'&body='+encodeURIComponent(b)};
