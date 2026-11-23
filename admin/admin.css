@@ -1,0 +1,37 @@
+/* Admin page additions on top of ../css/style.css */
+main h1{margin-bottom:20px}
+main h2{font-size:1.3rem}
+.panel.wide{max-width:none;margin-bottom:20px}
+.grid2{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:start}
+.grid2 .panel{margin-bottom:0}
+.grid2{margin-bottom:20px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+#adminMap{height:360px;border-radius:6px;border:1px solid var(--line);z-index:1;background:var(--tealbg)}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin:0 0 20px;color:var(--mut);font-size:.92rem}
+.stats b{display:block;color:var(--ink);font:700 1.4rem "Poppins",sans-serif}
+.modes{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 12px}
+.modes legend{font-weight:600;font-size:.9rem;padding:0 4px}
+.modes label{display:flex;gap:8px;align-items:flex-start;font-weight:400;margin:6px 0}
+.modes input{margin-top:4px}
+table{width:100%;border-collapse:collapse}
+td select,td input{padding:6px 8px;font-size:.88rem;min-width:110px}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.acts .btn{padding:6px 10px;font-size:.85rem}
+.btn.danger{background:var(--red);color:#fff}
+.msgline{min-height:1.2em;margin-top:10px}
+.msgline.ok{color:#1f7a45;font-weight:600}
+.msgline.err{color:var(--red);font-weight:600}
+.box{border-radius:8px;padding:10px 14px;margin:10px 0;font-size:.9rem}
+.box ul{margin:6px 0 0;padding-left:1.2em}
+.box.err{background:color-mix(in srgb,var(--red) 12%,transparent);border:1px solid var(--red)}
+.box.warn{background:var(--tealbg);border:1px solid var(--teal)}
+.skip{display:flex;gap:8px;align-items:center;font-weight:500;margin:12px 0}
+.legend{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;margin-left:8px}
+.sw.cur{background:#ffd54a;border:2px solid #b38f00}
+.sw.hid{background:#9aa3b8;border:2px solid #5d667b}
+.sw.pre{background:#4fc3f7;border:2px dashed #0277bd}
+tr.is-hidden td{color:var(--mut)}
+code{background:var(--tealbg);padding:1px 5px;border-radius:4px;font-size:.88em}
+/* The admin header has no menu button, so keep its links visible on small screens */
+@media (max-width:860px){header nav{display:flex;width:auto;flex-direction:row}}

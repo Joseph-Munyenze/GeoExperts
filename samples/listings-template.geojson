@@ -1,0 +1,67 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-plot-101",
+        "name": "Sample Estate, Plot 101",
+        "location": "Sample Town",
+        "land_use": "Residential",
+        "size_acres": 0.25,
+        "price_kes": 3500000,
+        "tenure": "Freehold",
+        "description": "Murram road access, power nearby",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.8998214,
+              -1.3001143
+            ],
+            [
+              36.9001786,
+              -1.3001143
+            ],
+            [
+              36.9001786,
+              -1.2998857
+            ],
+            [
+              36.8998214,
+              -1.2998857
+            ],
+            [
+              36.8998214,
+              -1.3001143
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-farm-7",
+        "name": "Sample Farm 7",
+        "location": "Sample Area",
+        "land_use": "Agricultural",
+        "size_acres": 5,
+        "price_kes": "KES 6,000,000",
+        "tenure": "Freehold",
+        "description": "Point location only; boundary to follow",
+        "status": "under offer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.95,
+          -1.35
+        ]
+      }
+    }
+  ]
+}

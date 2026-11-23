@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Geoexpert land listings template</name>
+  <!-- One Placemark per parcel. Fields go in ExtendedData (see the field guide on the admin page). -->
+  <Placemark>
+    <name>Sample Estate, Plot 102</name>
+    <description>Corner plot, water connection available</description>
+    <ExtendedData>
+      <Data name="id"><value>sample-plot-102</value></Data>
+      <Data name="location"><value>Sample Town</value></Data>
+      <Data name="land_use"><value>Residential</value></Data>
+      <Data name="size_acres"><value>0.5</value></Data>
+      <Data name="price_kes"><value>4200000</value></Data>
+      <Data name="tenure"><value>Freehold</value></Data>
+      <Data name="status"><value>available</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>36.9097793,-1.310203,0 36.9102769,-1.3101153,0 36.9102207,-1.309797,0 36.9097231,-1.3098847,0 36.9097793,-1.310203,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Sample Commercial Strip</name>
+    <description>Highway frontage</description>
+    <ExtendedData>
+      <Data name="id"><value>sample-commercial-3</value></Data>
+      <Data name="land_use"><value>Commercial</value></Data>
+      <Data name="price_kes"><value>12.5M</value></Data>
+      <Data name="tenure"><value>Leasehold, 99 yrs</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>36.9295651,-1.3301636,0 36.9303307,-1.3303263,0 36.9304349,-1.3298364,0 36.9296693,-1.3296737,0 36.9295651,-1.3301636,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Document>
+</kml>

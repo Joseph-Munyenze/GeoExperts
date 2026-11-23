@@ -1,0 +1,264 @@
+{
+  "type": "FeatureCollection",
+  "updated": "2026-11-21T12:00:00.000Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "kitengela-plot-214",
+      "properties": {
+        "id": "kitengela-plot-214",
+        "name": "Kitengela, Plot 214",
+        "location": "Kitengela",
+        "land_use": "Residential",
+        "size_acres": 0.25,
+        "size_computed": false,
+        "price_kes": 2800000,
+        "tenure": "Freehold",
+        "description": "Tarmac road 400 m, water on site",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.962649,
+              -1.4763489
+            ],
+            [
+              36.9629985,
+              -1.4762747
+            ],
+            [
+              36.962951,
+              -1.4760511
+            ],
+            [
+              36.9626015,
+              -1.4761253
+            ],
+            [
+              36.962649,
+              -1.4763489
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ruiru-kamakis-block-7",
+      "properties": {
+        "id": "ruiru-kamakis-block-7",
+        "name": "Ruiru, Kamakis Block 7",
+        "location": "Ruiru",
+        "land_use": "Residential",
+        "size_acres": 0.5,
+        "size_computed": false,
+        "price_kes": 7500000,
+        "tenure": "Freehold",
+        "description": "Electricity at the gate, gated estate",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.9580274,
+              -1.1564249
+            ],
+            [
+              36.9585276,
+              -1.1564952
+            ],
+            [
+              36.9585726,
+              -1.1561751
+            ],
+            [
+              36.9580724,
+              -1.1561048
+            ],
+            [
+              36.9580274,
+              -1.1564249
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naivasha-mirera-strip",
+      "properties": {
+        "id": "naivasha-mirera-strip",
+        "name": "Naivasha, Mirera Strip",
+        "location": "Naivasha",
+        "land_use": "Commercial",
+        "size_acres": 1,
+        "size_computed": false,
+        "price_kes": 18000000,
+        "tenure": "Leasehold, 99 yrs",
+        "description": "Highway frontage, mixed-use zoning",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.4094425,
+              -0.726537
+            ],
+            [
+              36.4101138,
+              -0.7262926
+            ],
+            [
+              36.4099575,
+              -0.725863
+            ],
+            [
+              36.4092862,
+              -0.7261074
+            ],
+            [
+              36.4094425,
+              -0.726537
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kajiado-kisaju-12",
+      "properties": {
+        "id": "kajiado-kisaju-12",
+        "name": "Kajiado, Kisaju 12",
+        "location": "Kajiado",
+        "land_use": "Agricultural",
+        "size_acres": 5,
+        "size_computed": false,
+        "price_kes": 4500000,
+        "tenure": "Freehold",
+        "description": "Borehole permit, fenced on three sides",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.8737487,
+              -1.5871788
+            ],
+            [
+              36.8753405,
+              -1.5870396
+            ],
+            [
+              36.8752513,
+              -1.5860212
+            ],
+            [
+              36.8736595,
+              -1.5861604
+            ],
+            [
+              36.8737487,
+              -1.5871788
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "syokimau-plot-9",
+      "properties": {
+        "id": "syokimau-plot-9",
+        "name": "Machakos, Syokimau Plot 9",
+        "location": "Syokimau",
+        "land_use": "Residential",
+        "size_acres": 0.125,
+        "size_computed": false,
+        "price_kes": 2200000,
+        "tenure": "Freehold",
+        "description": "Near SGR station, drainage in place",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.9320571,
+              -1.3592454
+            ],
+            [
+              36.9323011,
+              -1.3593107
+            ],
+            [
+              36.9323429,
+              -1.3591546
+            ],
+            [
+              36.9320989,
+              -1.3590893
+            ],
+            [
+              36.9320571,
+              -1.3592454
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nanyuki-likii-farm",
+      "properties": {
+        "id": "nanyuki-likii-farm",
+        "name": "Nanyuki, Likii Farm",
+        "location": "Nanyuki",
+        "land_use": "Agricultural",
+        "size_acres": 10,
+        "size_computed": false,
+        "price_kes": 19500000,
+        "tenure": "Freehold",
+        "description": "Irrigation channel, black cotton soil",
+        "status": "available"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.0841821,
+              0.009327
+            ],
+            [
+              37.0864191,
+              0.0096414
+            ],
+            [
+              37.0862179,
+              0.011073
+            ],
+            [
+              37.0839809,
+              0.0107586
+            ],
+            [
+              37.0841821,
+              0.009327
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

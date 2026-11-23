@@ -2,116 +2,119 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Geoexpert Land Surveyors Ltd | Land Surveying, GIS &amp; Remote Sensing</title>
-<meta name="description" content="Geoexpert Land Surveyors Ltd: topographical and geodetic surveys, drone mapping, GIS, remote sensing and spatial database creation in Kenya.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Geoexpert Land Surveyors Ltd | Surveying, GIS & Geospatial Solutions</title>
+<meta name="description" content="Geoexpert Land Surveyors Ltd: land surveying, PostgreSQL/PostGIS spatial databases, Web GIS, remote sensing, satellite imagery, drone mapping, photogrammetry and LiDAR services in Kenya.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 </head>
 <body>
-<header>
- <div class="nav">
-  <a class="brand" href="#top" aria-label="Geoexpert Land Surveyors Ltd"><img src="images/logo.png" alt="Geoexpert Land Surveyors Ltd logo"></a>
-  <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
-  <nav id="nav"><ul>
-   <li><a href="#services">Services</a></li><li><a href="#works">Our Works</a></li><li><a href="#about">Why Us</a></li><li><a href="#contact" class="btn">Get a Quote</a></li>
-  </ul></nav>
- </div>
-</header>
+<header><div class="bar">
+<a class="brand" href="#home" aria-label="Geoexpert Land Surveyors Ltd, home"><img src="assets/images/logo.png" alt="Geoexpert Land Surveyors Ltd"></a>
+<button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#land">Land for sale</a><a href="#projects">Projects</a>
+</nav></div></header>
 
-<main id="top">
+<main>
+<!-- HOME -->
+<section id="v-home" class="view">
 <div class="hero">
- <svg class="contours" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#fff" stroke-width="1.2" aria-hidden="true">
-  <ellipse cx="900" cy="330" rx="120" ry="60"/><ellipse cx="900" cy="330" rx="200" ry="105"/><ellipse cx="900" cy="330" rx="290" ry="150"/><ellipse cx="900" cy="330" rx="390" ry="205"/><ellipse cx="900" cy="330" rx="500" ry="260"/><ellipse cx="900" cy="330" rx="620" ry="320"/>
-  <ellipse cx="160" cy="80" rx="90" ry="45"/><ellipse cx="160" cy="80" rx="170" ry="90"/><ellipse cx="160" cy="80" rx="260" ry="135"/>
- </svg>
- <div class="wrap">
-  <div>
-   <span class="kicker">Land Surveyors &bull; GIS &bull; Remote Sensing</span>
-   <h1>Accurate maps. <em>Reliable</em> spatial data. Confident decisions.</h1>
-   <p>Geoexpert Land Surveyors Ltd delivers topographical and geodetic surveys, drone mapping, GIS and spatial databases for developers, institutions, engineers and landowners across Kenya.</p>
-   <div class="cta"><a class="btn gold" href="#contact">Request a Quotation</a><a class="btn line" href="#works">View Our Works</a></div>
-   <div class="chips"><span>RTK GNSS</span><span>Total Station</span><span>UAV / Drone</span><span>GIS &amp; Remote Sensing</span></div>
-  </div>
-  <div class="frame"><img src="images/project-1.jpg" alt="Topographical survey of Kitengela Subcounty Hospital"><small>Featured: Kitengela Subcounty Hospital topographical survey</small></div>
- </div>
+<div>
+<h1>Accurate maps. <span class="gold">Reliable</span> spatial data. Confident decisions.</h1>
+<p>Geoexpert Land Surveyors Ltd delivers topographical and geodetic surveys, drone and LiDAR mapping, GIS and spatial databases, urban planning and EIA reports for developers, institutions, engineers and landowners across Kenya. We also help you buy and sell verified land.</p>
+<div class="cta"><a class="btn" href="#services">Explore Our Services</a><a class="btn alt" href="#projects">View Our Works</a></div>
+<div class="chips" style="margin-top:24px"><span>RTK GNSS</span><span>Total Station</span><span>UAV / Drone</span><span>LiDAR</span><span>GIS and Remote Sensing</span></div>
 </div>
-
-<section id="services">
- <div class="wrap">
-  <span class="eyebrow">What we do</span>
-  <h2>Surveying and geospatial services, end to end</h2>
-  <p class="lead">From the first control point on the ground to the final spatial database on your desktop, we capture, process and deliver location data you can build on.</p>
-  <div class="grid g3">
-   <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Land &amp; Topographical Surveys</h3><p>Detailed ground surveys that capture levels, features and contours for design, planning and landscaping.</p><ul><li>Topographical and contour mapping</li><li>Cadastral and boundary surveys</li><li>Setting out and as-built surveys</li></ul></div>
-   <div class="card"><span class="tag">FEATURED</span><div class="ico"><svg viewBox="0 0 24 24"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><rect x="9" y="10" width="6" height="4" rx="1"/><path d="M7 6.5l3 4M17 6.5l-3 4M7 17.5l3-4M17 17.5l-3-4"/></svg></div><h3>Drone Mapping</h3><p>Fast, safe aerial capture of large or hard-to-reach sites, turned into survey-grade deliverables.</p><ul><li>Orthomosaics and aerial imagery</li><li>Digital surface and terrain models</li><li>Volumetrics, progress monitoring and 3D models</li></ul></div>
-   <div class="card"><span class="tag">FEATURED</span><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>Geodetic Control Surveys</h3><p>The accurate framework every project depends on: coordinated, verified control tied to the national datum.</p><ul><li>GNSS static and RTK control networks</li><li>Benchmarks and levelling</li><li>Coordinate adjustment and transformation</li></ul></div>
-   <div class="card"><span class="tag">FEATURED</span><div class="ico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><h3>Spatial Database Creation</h3><p>Your survey, asset and land data organised into clean, structured, queryable geodatabases.</p><ul><li>Geodatabase design and data migration</li><li>Digitising, georeferencing and data cleaning</li><li>Land, utility and asset registers</li></ul></div>
-   <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5M3 16.5L12 21l9-4.5"/></svg></div><h3>GIS Mapping &amp; Analysis</h3><p>Maps and spatial analysis that turn raw data into answers for planning, siting and decision-making.</p><ul><li>Thematic and base-map production</li><li>Suitability, terrain and drainage analysis</li><li>Web maps and map layouts</li></ul></div>
-   <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 12c3-5 7-7 10-7s7 2 10 7c-3 5-7 7-10 7s-7-2-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Remote Sensing</h3><p>Satellite and aerial imagery analysed to monitor land, vegetation and change over time.</p><ul><li>Land-cover and land-use mapping</li><li>Change detection and monitoring</li><li>Image classification and terrain extraction</li></ul></div>
-  </div>
- </div>
+<figure><img src="assets/images/hero-topographic-survey.jpg" alt="Topographic survey plan with contours, buildings, roads and cadastral boundary"><figcaption>Featured: Kitengela Subcounty Hospital topographical survey</figcaption></figure>
+</div>
+<h2>What we do</h2>
+<div class="pillars" id="svcHome"></div>
+<h2 style="margin-top:36px">How a survey works with us</h2>
+<ol class="steps"><li><b>Brief and site visit</b><br><span class="note">Tell us the parcel and the purpose. We confirm scope and price.</span></li><li><b>Field survey</b><br><span class="note">RTK GNSS, total station, UAV or LiDAR, whichever fits the site.</span></li><li><b>Processing and checks</b><br><span class="note">CAD drawings, maps and models checked before release.</span></li><li><b>Delivery</b><br><span class="note">Signed plans and data handed over in the formats you need.</span></li></ol>
+<div class="band"><h2>Looking for land? Browse surveyed plots and contact us directly.</h2><a class="btn" href="#land">Browse land for sale</a></div>
 </section>
 
-<section id="works" class="alt">
- <div class="wrap">
-  <span class="eyebrow">Selected projects</span>
-  <h2>Our works</h2>
-  <p class="lead">A sample of surveys we have delivered for institutions, developers and private clients. Select any plan to view it larger.</p>
-  <div class="grid g3">
-   <button class="work big" data-img="images/project-1.jpg" data-t="Kitengela Subcounty Hospital: Topographical Survey"><img src="images/project-1.jpg" alt="Kitengela Subcounty Hospital topographical survey plan"><div><h3>Kitengela Subcounty Hospital</h3><p>A topographical survey supporting proposed development at the hospital. Buildings, roads, cabro and slab surfaces, fences, power lines, trees and drainage structures are mapped with spot heights and 0.5 m contours.</p><div class="meta"><span>Topographical survey</span><span>Scale 1:1000</span><span>0.5 m contours</span><span>Kitengela</span></div></div></button>
-   <button class="work" data-img="images/project-2.jpg" data-t="Isiolo KMTC: Topographical Survey"><img src="images/project-2.jpg" alt="Topographical survey of Isiolo KMTC"><div><h3>Isiolo KMTC</h3><p>Site survey of the training campus, capturing the building footprints and surrounding ground for planning and design.</p><div class="meta"><span>Institution</span><span>Scale 1:1500</span><span>Isiolo</span></div></div></button>
-   <button class="work" data-img="images/project-3.jpg" data-t="Mtwapa: Topographical Survey"><img src="images/project-3.jpg" alt="Mtwapa topographical survey"><div><h3>Mtwapa Coastal Site</h3><p>A coastal topographical survey with benchmark, spot heights, shoreline, boreholes, a water tank tower and test pits located.</p><div class="meta"><span>Coastal</span><span>Scale 1:500</span><span>Mtwapa</span></div></div></button>
-   <button class="work" data-img="images/project-4.jpg" data-t="Tigoni: Topographical Survey"><img src="images/project-4.jpg" alt="Tigoni topographical survey along Raini Goldhands Road"><div><h3>Tigoni, Raini Goldhands Road</h3><p>A long corridor survey along a murram road, mapping the road edges and adjoining features across the site.</p><div class="meta"><span>Road corridor</span><span>Scale 1:750</span><span>Tigoni</span></div></div></button>
-   <button class="work big" data-img="images/project-5.jpg" data-t="Karen LR 1170: Topographical Survey"><img src="images/project-5.jpg" alt="Topographical map of Karen 1170"><div><h3>Karen, LR 1170</h3><p>A residential plot survey showing buildings, fences, structures, trees and ground contours, drawn at 1:500 for detailed design and landscaping work.</p><div class="meta"><span>Residential</span><span>Scale 1:500</span><span>Contours &amp; features</span><span>Karen</span></div></div></button>
+<!-- SERVICES -->
+<section id="v-services" class="view">
+<h1>Services</h1>
+<p>Five service groups, one team. Pick what you need, or request a bundle for a full project.</p>
+<div class="seg" id="seg"></div><div class="pillars" id="svc"></div>
+<div class="band"><h2>Not sure which survey you need?</h2><div class="cta" style="margin:0"><a class="btn js-mail-general" href="mailto:info@geoexpert.co.ke">Email us your site details</a><a class="btn js-tel" href="tel:+254700000000">Call us</a></div></div>
+
+<section class="dbsvc" aria-labelledby="dbH">
+  <h2 id="dbH">Spatial database services</h2>
+  <p>We design, build and maintain PostgreSQL/PostGIS spatial databases so your survey, parcel, utility and imagery data sit in one secure, queryable system.</p>
+  <div class="grid">
+    <article class="pillar"><h3>PostGIS database design</h3><p>Schema design for parcels, survey control, projects, utilities, imagery footprints and metadata, with roles and constraints.</p><span class="chip">PostgreSQL · PostGIS</span></article>
+    <article class="pillar"><h3>Data migration and cleaning</h3><p>Load Shapefile, GeoPackage, CAD, GeoJSON and CSV data; fix geometry, standardise CRS and validate topology.</p><span class="chip">GDAL/OGR · QGIS</span></article>
+    <article class="pillar"><h3>Spatial queries and reporting</h3><p>Area, overlap, buffer and proximity analysis, saved views and reports for planning and asset management.</p><span class="chip">SQL · Views</span></article>
+    <article class="pillar"><h3>Publishing and administration</h3><p>Connect the database to web maps and OGC services, with access control, backups and restore testing.</p><span class="chip">WMS · WFS · OGC API</span></article>
   </div>
- </div>
+  <div class="table-wrap"><table style="width:100%;border-collapse:collapse">
+    <thead><tr><th align="left">Deliverable</th><th align="left">Typical outputs</th><th align="left">Quality checks</th></tr></thead>
+    <tbody><tr><td>Spatial database creation</td><td>PostGIS database, schema, metadata catalogue, role model</td><td>CRS, geometry validity, constraints, backup/restore test</td></tr></tbody>
+  </table></div>
+  <div class="cta" style="margin-top:16px">
+    <a class="btn" href="Geoexpert_PostGIS_Database_Setup.sql" download>Download PostGIS database script</a>
+    <a class="btn alt" href="Geoexpert_GIS_Remote_Sensing_Architecture.md" download>Download GIS/RS implementation guide</a>
+  </div>
+  <p class="note">The SQL script is a starting schema, not a complete production deployment. Configure database roles, secrets, backups, network security and migrations with your system administrator before use.</p>
+</section>
+<h2 style="margin-top:36px">Credentials and fleet</h2>
+<div class="chips"><span>Add verified surveyor registration details</span><span>Add verified NEMA expert details</span><span>Dual-frequency RTK GNSS receivers</span><span>Survey-grade drone with RTK</span><span>Airborne LiDAR sensor</span><span>Total stations</span></div>
+<p class="note">Publish only credentials, licences and equipment that the company can substantiate. Regulated work must be undertaken by appropriately registered professionals.</p>
+<p class="note"><strong>Professional scope:</strong> Cadastral survey plans, statutory survey work, physical planning approvals and EIA submissions must be handled by professionals holding the relevant current Kenyan registrations and licences. The website should state the responsible practitioner and registration details where applicable.</p>
 </section>
 
-<section id="about">
- <div class="wrap why">
-  <div>
-   <span class="eyebrow">Why Geoexpert</span>
-   <h2>Survey-grade accuracy you can build on</h2>
-   <p class="lead" style="margin-bottom:20px">Every project is controlled, checked and delivered in formats your architects, engineers and planners can use straight away.</p>
-   <div class="steps"><div><b>01</b>Brief &amp; planning</div><div><b>02</b>Control &amp; field capture</div><div><b>03</b>Processing &amp; QA</div><div><b>04</b>Maps &amp; data delivery</div></div>
-  </div>
-  <div class="vals">
-   <div><b>Accuracy</b><span>Modern RTK GNSS, total stations and UAV sensors tied to proper geodetic control.</span></div>
-   <div><b>Integrity</b><span>Honest scoping, clear quotations and data you can trust and verify.</span></div>
-   <div><b>Professionalism</b><span>Clean plans, CAD and GIS deliverables, and timely submission.</span></div>
-  </div>
- </div>
+<!-- LAND -->
+<section id="v-land" class="view">
+<h1>Land marketplace</h1>
+<p>Browse land currently listed with Geoexpert, view each parcel on satellite imagery, and email or call us directly about any plot.</p>
+<p class="note"><strong>Important:</strong> Before any purchase, independently verify ownership, encumbrances, rates/rent, planning status, access and survey boundaries through official searches and qualified professionals. A website listing is not proof of title or ownership.</p>
+<div class="filters">
+<div><label for="fT">Land use</label><select id="fT"><option value="">Any</option></select></div>
+<div><label for="fP">Maximum price</label><select id="fP"><option value="0">Any</option><option value="3000000">KES 3M</option><option value="8000000">KES 8M</option><option value="20000000">KES 20M</option></select></div>
+<div><label for="fA">Minimum size</label><select id="fA"><option value="0">Any</option><option value="0.25">¼ acre</option><option value="1">1 acre</option><option value="5">5 acres</option></select></div>
+</div>
+<div class="land">
+<div><div class="list" id="list" aria-live="polite"><p class="note">Loading listings…</p></div>
+<div class="panel" style="margin-top:24px;max-width:none"><h3>Sell your land with us</h3>
+<p class="note">Send your property details by email for review. Geoexpert will assess the information and may request supporting documents before deciding whether to publish the listing. Sending details does not mean the title or ownership has been verified.</p>
+<div class="row"><div class="field"><label for="sL">Location</label><input id="sL" type="text" placeholder="e.g. Kitengela"></div><div class="field"><label for="sT">Title number</label><input id="sT" type="text" placeholder="e.g. KJD/KITENGELA/1234"></div></div>
+<div class="row"><div class="field"><label for="sPrice">Expected asking price (KES)</label><input id="sPrice" type="number" min="0" placeholder="Optional"></div><div class="field"><label for="sArea">Land size (acres)</label><input id="sArea" type="number" min="0.01" step="0.01" placeholder="e.g. 0.25"></div></div>
+<div class="field"><label for="sContact">Owner / authorised agent contact</label><input id="sContact" type="text" placeholder="Name and phone number"></div>
+<div class="field"><label for="sS">What do you need?</label><select id="sS"><option>Valuation</option><option>Boundary verification before sale</option><option>Both</option><option>Listing only (subject to review)</option></select></div>
+<div class="field"><label><input type="checkbox" id="sConsent"> I confirm I am the owner or authorised representative and consent to Geoexpert reviewing these details.</label></div>
+<button class="btn" id="sBtn" type="button">Email listing details</button> <a class="btn alt js-tel" href="tel:+254700000000">Call us</a> <span class="note" id="sMsg" role="status"></span></div></div>
+<div class="mapbox"><div id="landMap" role="region" aria-label="Satellite map of listed parcels"></div><p class="note" id="landMapNote" style="margin:8px 4px 0">Basemap: Sentinel-2 cloudless satellite mosaic (open data, 10 m). Use the layer control to switch to higher-resolution imagery or a street map. Parcel outlines are indicative; confirm boundaries through official search and survey.</p><div class="detail" id="det"></div></div>
+</div>
 </section>
 
-<section id="contact" class="contact">
- <div class="wrap">
-  <div class="info">
-   <span class="eyebrow">Contact us</span>
-   <h2>Let&rsquo;s map your next project</h2>
-   <p>Tell us about your site and what you need. We will respond with a clear quotation.</p>
-   <p><span class="lbl">Call</span><a href="tel:+254702993421">0702 993 421</a><br><a href="tel:+254740311640">0740 311 640</a></p>
-   <p><span class="lbl">Email</span><a href="mailto:geoexpert@gmail.com">geoexpert@gmail.com</a></p>
-   <p><span class="lbl">Postal address</span><a style="font-size:16px">P.O. Box 51267-00100</a></p>
-  </div>
-  <form id="f">
-   <input id="n" placeholder="Your name" required>
-   <input id="p" placeholder="Phone number">
-   <select id="s"><option>Topographical survey</option><option>Drone mapping</option><option>Geodetic control survey</option><option>GIS mapping</option><option>Remote sensing</option><option>Spatial database creation</option><option>Other</option></select>
-   <textarea id="m" placeholder="Project location and brief details"></textarea>
-   <button class="btn gold" type="submit">Send Request by Email</button>
-  </form>
- </div>
+<!-- PROJECTS -->
+<section id="v-projects" class="view">
+<h1>Projects</h1>
+<p>Examples below demonstrate the types of work the company may showcase. Replace these sample case studies with projects completed by your team and approved for publication.</p>
+<div class="cases">
+<article class="case"><img src="assets/images/hero-topographic-survey.jpg" alt="Topographic survey plan"><div><h3>Kitengela Subcounty Hospital, topographic survey</h3><p>Contours, buildings, roads, power lines, vegetation and the cadastral boundary, drawn to a client-ready plan.</p></div></article>
+<article class="case"><svg viewBox="0 0 300 160" aria-hidden="true"><g fill="var(--teal)" opacity=".7"><circle cx="40" cy="110" r="2"/><circle cx="60" cy="100" r="2"/><circle cx="80" cy="95" r="2"/><circle cx="100" cy="80" r="2"/><circle cx="120" cy="70" r="2"/><circle cx="140" cy="62" r="2"/><circle cx="160" cy="58" r="2"/><circle cx="180" cy="66" r="2"/><circle cx="200" cy="80" r="2"/><circle cx="220" cy="95" r="2"/><circle cx="240" cy="108" r="2"/><circle cx="70" cy="120" r="2"/><circle cx="110" cy="110" r="2"/><circle cx="150" cy="95" r="2"/><circle cx="190" cy="100" r="2"/><circle cx="230" cy="125" r="2"/></g></svg><div><h3>Road corridor LiDAR, 14 km</h3><p>Classified point cloud, cross-sections and earthwork volumes for the design team.</p></div></article>
+<article class="case"><svg viewBox="0 0 300 160" aria-hidden="true"><rect x="30" y="30" width="110" height="100" fill="var(--tealbg)" stroke="var(--ink)"/><rect x="160" y="30" width="110" height="100" fill="var(--teal)" fill-opacity=".35" stroke="var(--ink)"/><path d="M60 100 L90 60 L120 95" fill="none" stroke="var(--ink)"/><path d="M190 100 L220 55 L250 95" fill="none" stroke="var(--ink)"/></svg><div><h3>Wetland-edge resort, EIA</h3><p>Baseline survey, drone orthomosaic, impact assessment and NEMA submission.</p></div></article>
+</div>
+<h2 style="margin-top:36px">Drone and LiDAR products</h2>
+<p>Switch between the products we deliver from one flight. Sample terrain generated for this prototype.</p>
+<div class="vw" style="max-width:640px"><div class="seg" id="vm"></div><canvas id="cv" width="620" height="360" role="img" aria-label="Sample terrain shown as orthophoto, DSM, DTM or point cloud"></canvas><p class="note" id="vn" style="margin-top:8px"></p></div>
+<p class="note" style="margin-top:20px">Placeholder projects: swap in real before-and-after maps and 3D viewers.</p>
 </section>
+
 </main>
+<footer>Geoexpert Land Surveyors Ltd, Kenya. Expanded website prototype. Listings are indicative and do not prove title or ownership. Owner listings are reviewed before publication. Contact details are placeholders.</footer>
+<a class="btn wa wa-fab" href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp</a>
 
-<footer><div class="wrap"><span>&copy; 2026 Geoexpert Land Surveyors Ltd. All rights reserved.</span><span>Accuracy &nbsp;|&nbsp; Integrity &nbsp;|&nbsp; Professionalism</span></div></footer>
-
-<div class="lb" id="lb"><button id="x" aria-label="Close">&times;</button><img id="li" alt=""><p id="lt"></p></div>
-
-<script src="js/main.js" defer></script>
+<dialog id="dlg" aria-labelledby="dT"><h3 id="dT"></h3><p id="dD"></p><p><b>You receive:</b> <span id="dL"></span></p><div class="cta"><button class="btn" id="dGo" type="button">Email about this service</button><a class="btn alt js-tel" href="tel:+254700000000">Call</a><button class="btn alt" id="dX" type="button">Close</button></div></dialog>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="js/parcel-schema.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

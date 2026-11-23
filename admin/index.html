@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Land listings manager | Geoexpert admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../" aria-label="Back to the website"><img src="../assets/images/logo.png" alt="Geoexpert Land Surveyors Ltd"></a>
+  <nav aria-label="Admin"><a href="../#land" target="_blank" rel="noopener">View land page</a><a href="#" id="signOut" hidden>Sign out</a></nav>
+</div></header>
+
+<main>
+  <h1>Land listings manager</h1>
+
+  <!-- SIGN IN -->
+  <section id="loginView" class="panel" hidden>
+    <h3>Admin sign in</h3>
+    <form id="loginForm">
+      <div class="field"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required></div>
+      <button class="btn" type="submit">Sign in</button>
+      <p class="note msgline" id="loginMsg" role="status"></p>
+    </form>
+    <p class="note">The password is set in the <code>.env</code> file next to <code>server.js</code>.</p>
+  </section>
+
+  <!-- NO SERVER -->
+  <section id="noServer" class="panel wide" hidden>
+    <h3>The admin server is not running</h3>
+    <p>This page needs the site's Node.js server. In VS Code open a terminal in the project folder and run <code>npm start</code>, then open <code>http://localhost:3000/admin/</code>.</p>
+  </section>
+
+  <div id="appView" hidden>
+    <div class="stats">
+      <div><b id="stTotal">0</b>listings in total</div>
+      <div><b id="stPublic">0</b>shown on the website</div>
+      <div><b id="stUpdated">–</b>last updated</div>
+    </div>
+
+    <div class="grid2">
+      <!-- 1. UPLOAD -->
+      <section class="panel wide">
+        <h2>1. Upload land listings</h2>
+        <p class="note">Upload a <b>GeoJSON</b> (.geojson / .json) or <b>KML</b> (.kml) file with one feature per parcel: polygon boundaries or points, in WGS 84 longitude/latitude. See the field guide at the bottom of this page.</p>
+        <div class="field"><label for="file">Choose file</label><input id="file" type="file" accept=".geojson,.json,.kml,application/geo+json,application/vnd.google-earth.kml+xml"></div>
+        <fieldset class="modes">
+          <legend>How should this file be used?</legend>
+          <label><input type="radio" name="mode" value="append" checked> <span><b>Add or update</b>: keep current listings; a feature with the same <code>id</code> replaces the old one.</span></label>
+          <label><input type="radio" name="mode" value="replace"> <span><b>Replace all</b>: the website will show only the listings in this file.</span></label>
+        </fieldset>
+        <p class="note">Templates: <a href="../samples/listings-template.geojson" download>GeoJSON template</a> · <a href="../samples/listings-template.kml" download>KML template</a></p>
+      </section>
+
+      <!-- MAP -->
+      <section class="panel wide">
+        <h2>Map</h2>
+        <div id="adminMap" aria-label="Map of listings"></div>
+        <p class="note legend"><span class="sw cur"></span> current listings <span class="sw hid"></span> sold / hidden <span class="sw pre"></span> upload preview</p>
+      </section>
+    </div>
+
+    <!-- 2. PREVIEW -->
+    <section class="panel wide" id="previewView" hidden>
+      <h2>2. Check before publishing</h2>
+      <p id="previewSummary"></p>
+      <div id="previewErrors"></div>
+      <div id="previewWarnings"></div>
+      <div class="table-wrap"><table><thead><tr><th>Name</th><th>Land use</th><th>Size</th><th>Price</th><th>Tenure</th><th>Status</th><th>Geometry</th></tr></thead><tbody id="previewRows"></tbody></table></div>
+      <label class="skip" id="skipWrap" hidden><input type="checkbox" id="skipInvalid"> Publish the valid features and skip the ones with problems</label>
+      <div class="cta">
+        <button class="btn" id="publishBtn" type="button">Publish to website</button>
+        <button class="btn alt" id="cancelBtn" type="button">Cancel</button>
+      </div>
+      <p class="note msgline" id="publishMsg" role="status"></p>
+    </section>
+
+    <!-- 3. CURRENT -->
+    <section class="panel wide">
+      <h2>3. Current listings</h2>
+      <p class="note">Change a status or price and it saves straight away. <b>Sold</b> and <b>Hidden</b> listings stay here but are not shown on the website.</p>
+      <div class="table-wrap"><table><thead><tr><th>Name</th><th>Land use</th><th>Size</th><th>Price (KES)</th><th>Status</th><th>Actions</th></tr></thead><tbody id="currentRows"></tbody></table></div>
+      <div class="cta"><button class="btn alt" id="downloadBtn" type="button">Download all listings (GeoJSON)</button></div>
+      <p class="note msgline" id="currentMsg" role="status"></p>
+    </section>
+
+    <!-- 4. BACKUPS -->
+    <section class="panel wide">
+      <h2>4. Backups</h2>
+      <p class="note">A backup is saved automatically before every change (the latest 50 are kept). Restoring also backs up the current state first, so it can be undone.</p>
+      <div class="row"><div class="field"><label for="backupSel">Backup</label><select id="backupSel"></select></div>
+      <div class="field" style="align-self:end"><button class="btn alt" id="restoreBtn" type="button">Restore this backup</button></div></div>
+      <p class="note msgline" id="backupMsg" role="status"></p>
+    </section>
+
+    <!-- GUIDE -->
+    <section class="panel wide">
+      <h2>Field guide</h2>
+      <p class="note">Column names are not case-sensitive. Any of the names in the second column work, so files exported from QGIS, ArcGIS, Google Earth or Google My Maps can be uploaded as they are. In KML, put fields in <b>ExtendedData</b>; the placemark name and description are read too.</p>
+      <div class="table-wrap"><table><thead><tr><th>Field</th><th>Accepted names</th><th>Notes</th></tr></thead><tbody id="guideRows"></tbody></table></div>
+    </section>
+  </div>
+</main>
+<footer>Geoexpert admin · changes are published to <code>data/parcels.geojson</code></footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="../js/parcel-schema.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
